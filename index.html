@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Paw-fee Shop</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased">
+
+    <!-- App Container -->
+    <div id="app" class="max-w-7xl mx-auto">
+
+        <!-- Header -->
+        <header class="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-sm shadow-md z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <a href="#" class="flex items-center space-x-2">
+                            <!-- Updated Cat Paw-fee Logo -->
+                            <svg class="h-9 w-9 starbucks-green-text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <!-- Cup -->
+                                <path d="M3,4h18v10c0,2.21-1.79,4-4,4H7c-2.21,0-4-1.79-4-4V4z M19,14V6H5v8c0,1.1,0.9,2,2,2h10C18.1,16,19,15.1,19,14z"/>
+                                <!-- Handle -->
+                                <path d="M21,6h-1v8h1c1.1,0,2-0.9,2-2V8C23,6.9,22.1,6,21,6z"/>
+                                <!-- Ears -->
+                                <path d="M6,4L4,2h4L6,4z M18,4l-2-2h4l-2,2z"/>
+                            </svg>
+                            <span class="text-xl font-bold text-gray-800">Cat Paw-fee</span>
+                        </a>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="#menu" class="text-gray-600 hover:starbucks-green-text font-medium transition duration-150 ease-in-out">Menu</a>
+                        <a href="#cats" class="text-gray-600 hover:starbucks-green-text font-medium transition duration-150 ease-in-out">Our Cats</a>
+                        <a href="#location" class="text-gray-600 hover:starbucks-green-text font-medium transition duration-150 ease-in-out">Location</a>
+                    </nav>
+
+                    <!-- Order Button -->
+                    <div class="hidden md:block">
+                        <button class="starbucks-green text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transform hover:scale-105 transition duration-300">
+                            Order Meow
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-700">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#menu" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:starbucks-green">Menu</a>
+                    <a href="#cats" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:starbucks-green">Our Cats</a>
+                    <a href="#location" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:starbucks-green">Location</a>
+                    <button class="w-full mt-2 starbucks-green text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90">
+                        Order Meow
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="pt-16">
+            <!-- Hero Section -->
+            <section class="relative h-[60vh] min-h-[400px] bg-cover bg-center" style="background-image: url('https://placehold.co/1200x800/d1c7b7/333333?text=Cozy+Cat+Ambiance');">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                        Your Daily Dose of Purrfection.
+                    </h1>
+                    <p class="text-lg md:text-xl max-w-2xl mb-8" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">
+                        Premium coffee, delicious pastries, and the calming company of our friendly rescue cats.
+                    </p>
+                    <a href="#menu" class="bg-white starbucks-green-text font-bold py-3 px-8 rounded-full shadow-xl hover:bg-gray-100 transform hover:scale-105 transition duration-300 text-lg">
+                        Explore the Menu
+                    </a>
+                </div>
+            </section>
+
+            <!-- Menu Section -->
+            <section id="menu" class="py-16 sm:py-24 bg-white">
+                <div class="px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl sm:text-4xl font-bold starbucks-green-text tracking-tight">Our Menu</h2>
+                        <p class="mt-4 text-lg text-gray-600">Crafted with love, served with a purr.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Menu Item 1 -->
+                        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoIxqvcbXivX_jbK4Z9T8DW8BG_pcZQ6MX1w&s" alt="Purrfect Latte" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800">Purrfect Latte</h3>
+                                <p class="mt-2 text-gray-600">Rich espresso with steamed milk and a hint of vanilla.</p>
+                                <p class="mt-4 text-lg font-bold starbucks-green-text">$4.50</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 2 -->
+                        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://i.pinimg.com/474x/4c/1b/9b/4c1b9bc5d25718a332c6b82ab460e02a.jpg" alt="Catpuccino" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800">Catpuccino</h3>
+                                <p class="mt-2 text-gray-600">A classic cappuccino with a dusting of cocoa powder.</p>
+                                <p class="mt-4 text-lg font-bold starbucks-green-text">$4.00</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 3 -->
+                        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://images.immediate.co.uk/production/volatile/sites/2/2021/11/Mocha-1fc71f7.png?resize=1200%2C630" alt="Meowcha" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800">Meowcha</h3>
+                                <p class="mt-2 text-gray-600">A decadent blend of chocolate, espresso, and steamed milk.</p>
+                                <p class="mt-4 text-lg font-bold starbucks-green-text">$5.00</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 4 -->
+                        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAo7-e2nYWSgIYlmL09TLUg82F3BXwoV56MA&s" alt="Paw-some Pastry" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800">Paw-some Pastry</h3>
+                                <p class="mt-2 text-gray-600">A flaky, buttery croissant, perfect for dipping.</p>
+                                <p class="mt-4 text-lg font-bold starbucks-green-text">$3.50</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 5 -->
+                        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://www.dailypaws.com/thmb/IfS1if1-jamk-8d-CqFdGt98p_4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tuna-and-catnip-cat-treats-2000-539b64569df146b3ae160f4f314e6a90.jpg" alt="Tuna Treat Tart" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800">Tuna Treat Tart</h3>
+                                <p class="mt-2 text-gray-600">A savory tart for our feline friends (and brave humans!).</p>
+                                <p class="mt-4 text-lg font-bold starbucks-green-text">$2.50</p>
+                            </div>
+                        </div>
+                        <!-- Menu Item 6 -->
+                        <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJUDGNkoPViCdN0jtNg4HmMpafF5Ac6wBseg&s" alt="Cool Cat Cooler" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800">Cool Cat Cooler</h3>
+                                <p class="mt-2 text-gray-600">A refreshing caramel frapuccino.</p>
+                                <p class="mt-4 text-lg font-bold starbucks-green-text">$3.75</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our Cats Section -->
+            <section id="cats" class="py-16 sm:py-24 bg-gray-50">
+                <div class="px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl sm:text-4xl font-bold starbucks-green-text tracking-tight">Meet Our Residents</h2>
+                        <p class="mt-4 text-lg text-gray-600">All our cats are adoptable and looking for a forever home.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Cat 1 -->
+                        <div class="text-center">
+                            <img src="https://cdn2.thecatapi.com/images/MTc4ODUxNg.jpg" alt="Cat Whiskers" class="w-48 h-48 mx-auto rounded-full object-cover shadow-lg border-4 border-white">
+                            <h3 class="mt-6 text-xl font-semibold text-gray-800">Whiskers</h3>
+                            <p class="mt-2 text-gray-600">The wise old soul. Loves naps and gentle pets.</p>
+                        </div>
+                        <!-- Cat 2 -->
+                        <div class="text-center">
+                            <img src="https://avatars.githubusercontent.com/u/84027511?v=4" alt="Cat Ginger" class="w-48 h-48 mx-auto rounded-full object-cover shadow-lg border-4 border-white">
+                            <h3 class="mt-6 text-xl font-semibold text-gray-800">Pikachu, the Ginger</h3>
+                            <p class="mt-2 text-gray-600">Playful and energetic. Will chase any laser pointer.</p>
+                        </div>
+                        <!-- Cat 3 -->
+                        <div class="text-center">
+                            <img src="https://cdn2.thecatapi.com/images/d58.jpg" alt="Cat Shadow" class="w-48 h-48 mx-auto rounded-full object-cover shadow-lg border-4 border-white">
+                            <h3 class="mt-6 text-xl font-semibold text-gray-800">Shadow</h3>
+                            <p class="mt-2 text-gray-600">A shy but sweet void cat who loves to cuddle.</p>
+                        </div>
+                        <!-- Cat 4 -->
+                        <div class="text-center">
+                            <img src="https://cdn2.thecatapi.com/images/eeq.jpg" alt="Cat Blossom" class="w-48 h-48 mx-auto rounded-full object-cover shadow-lg border-4 border-white">
+                            <h3 class="mt-6 text-xl font-semibold text-gray-800">Blossom</h3>
+                            <p class="mt-2 text-gray-600">The sweet innocent Blossom, ready to purr and sleep on your lap</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Location Section -->
+            <section id="location" class="py-16 sm:py-24 bg-white">
+                <div class="px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl sm:text-4xl font-bold starbucks-green-text tracking-tight">Visit Us</h2>
+                            <p class="mt-4 text-lg text-gray-600">
+                                Come for the coffee, stay for the cuddles. Find us in the heart of the city.
+                            </p>
+                            <div class="mt-8 space-y-4">
+                                <div class="flex items-start">
+                                    <svg class="h-6 w-6 starbucks-green-text flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <div class="ml-4">
+                                        <h4 class="font-semibold text-gray-800">Address</h4>
+                                        <p class="text-gray-600">123 Feline Fine St, Meowville, 90210</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <svg class="h-6 w-6 starbucks-green-text flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                    <div class="ml-4">
+                                        <h4 class="font-semibold text-gray-800">Hours</h4>
+                                        <p class="text-gray-600">Mon - Fri: 7am - 7pm</p>
+                                        <p class="text-gray-600">Sat - Sun: 8am - 8pm</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-lg shadow-xl overflow-hidden h-96">
+                             <img src="https://img.freepik.com/premium-vector/best-location-coffee-shop_81894-2679.jpg" alt="Map to Cat Paw-fee" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="starbucks-green">
+            <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-white">
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-white hover:text-gray-200">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-200">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                    </a>
+                    <a href="#" class="text-white hover:text-gray-200">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.465c.636-.247 1.363-.416 2.427.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0-2a7 7 0 110 14 7 7 0 010-14zm6.406-1.133a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" clip-rule="evenodd" /></svg>
+                    </a>
+                </div>
+                <div class="text-center text-sm text-gray-200">
+                    &copy; 2025 Cat Paw-fee Shop. All Rights Reserved.
+                </div>
+                <div class="text-center text-xs text-gray-300 mt-2">
+                    Brewed with love by a cat enthusiast.
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

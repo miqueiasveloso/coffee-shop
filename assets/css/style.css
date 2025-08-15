@@ -1,0 +1,32 @@
+/* Custom styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb; /* A light gray background */
+}
+
+/* Starbucks-inspired green */
+.starbucks-green {
+    background-color: #006241;
+}
+
+.starbucks-green-text {
+    color: #006241;
+}
+
+/* Custom scrollbar for a more polished look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #006241;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #004a32;
+}
